@@ -15,7 +15,11 @@ Other reference that was used : _Information in Central Bank Sentiment: An Analy
 ## DATASET OVERVIEW
 To conduct this analysis, we compiled a novel dataset of speeches delivered by european central bank Governors and senior central bankers, published by the Bank for International Settlements.
 
-The dataset is composed of all central bankers' speeches avilable on the BIS website, coming from european central banks institutions. The speeches date from 2009 up until 2024. The data was requested through the BIS API and the speeches themselves were scrapped from the individual BIS speeches html pages.
-⚠️​ the data collecting function takes a while to run as there are about 20000 speeches on the BIS website that are then filtered and scrapped
+The dataset is composed of all central bankers' speeches avilable on the BIS website, coming from european central banks institutions. The speeches date from 2009 up until 2024. The data was requested through the BIS API and the speeches themselves were scrapped from the individual BIS speeches html pages. \
+⚠️​ The data collecting function takes a while to run as there are about 20000 speeches on the BIS website that are then filtered and scrapped
 The get_central_bank_speeches_urls function requests all speeches individual urls and the load_central_banks_speeches requests all speeches metadata information and then scrapes the speeches content from the html pages if the filter of the institution correponds.
 The gender information is added through requesting the genderize.io API. (a mapping dictionary is also provided in case the API request doesn't go through
+
+## Structure and results
+The project was specifically required to be able to be run on a single notebook from beginning to end. This is why there is no need for a virtual environment, all the dependencies needed can be found at the very beginning of the notebook.\
+To read this project, just run the _projectv1.ipynb_ notebook. Careful that it takes multiple hours to run as we are scraping the speeches from the BIS website and this takes a while. The modeling part may also be quite long.
